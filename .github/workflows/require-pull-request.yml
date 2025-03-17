@@ -1,0 +1,16 @@
+# This is a workflow to block push directly to dev despite the role
+name: require pull request
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "dev" branch
+  push:
+    branches: [ "dev" ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  job:
+    name: require pull request
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo-hello
