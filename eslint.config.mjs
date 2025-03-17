@@ -48,6 +48,9 @@ export default [
       },
     },
     settings: {
+        react: {
+          version: '19.0'
+        },
       next: {
         rootDir: ".", // Specify your Next.js root directory if needed
       },
