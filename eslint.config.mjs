@@ -29,6 +29,16 @@ export default [
       'import/prefer-default-export': 'off', // Allow single named exports
       '@typescript-eslint/no-explicit-any': 'off',
       'no-console': ['error', { allow: ['info', 'error', 'trace', 'dir'] }],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
     },
     settings: {
       react: {
@@ -37,6 +47,12 @@ export default [
       next: {
         rootDir: '.', // Specify your Next.js root directory if needed
       },
+      "import/resolver": {
+        // Use Node resolver for JavaScript files
+        node: {
+          extensions: [".js", ".jsx", ".ts", ".tsx"]
+          },
+      }
     },
     parser: '@typescript-eslint/parser', // Add TypeScript parser for TypeScript support
     parserOptions: {
