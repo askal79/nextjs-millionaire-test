@@ -11,6 +11,7 @@ const compat = new FlatCompat({
 });
 
 /** @type {import('eslint').Linter.Config[]} */
+// eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"]},
   {languageOptions: { globals: globals.browser }},
@@ -18,7 +19,8 @@ export default [
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   ...compat.config({
-    extends: ["next/core-web-vitals", "next/typescript"]
+    ignorePatterns: [".prettierrc.mjs", ".lintstagedrc.mjs"],
+    extends: ["next/core-web-vitals", "next/typescript", "next", "prettier"]
   }),
   pluginReact.configs.flat['jsx-runtime'], // Add this if you are using React 17+
   {
