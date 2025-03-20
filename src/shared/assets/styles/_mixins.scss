@@ -1,0 +1,11 @@
+@import "breakpoints";
+@mixin big-screen {
+  @media screen and (min-width: calc(#{$tablet} + 1px)) {
+    @content;
+  }
+}
+@mixin small-screen {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}

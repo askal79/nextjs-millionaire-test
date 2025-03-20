@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import '../shared/assets/styles/globals.css';
+import '@/shared/assets/styles/globals.css';
+import '@/shared/assets/styles/index.scss';
 import { inter } from '@/shared/assets/fonts/fonts';
 
 export const metadata: Metadata = {
