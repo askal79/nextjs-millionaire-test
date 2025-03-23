@@ -1,10 +1,10 @@
-import { Button } from '@/shared/components/button/Button';
-import {HexagonBig} from "@/shared/components/hexagon/HexagonBig";
-import {HexagonSmall} from "@/shared/components/hexagon";
+import {StartPage} from "@/modules/start-finish/pages/Start/StartPage";
+import {Metadata} from "next";
 
-export default function Page() {
-  return (
-    <div>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'Who wants to be a millionaire?',
+  description: 'Game where you can win a million dollars, staart now!',
 }
+
+
+export default StartPage;
