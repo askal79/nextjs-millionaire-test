@@ -1,0 +1,43 @@
+.buttonDefault {
+  background: $orange-100;
+  color: var(--color-white);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+
+  &:disabled {
+    background: $orange-5;
+    color: $black-100;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  :hover {
+    background: $orange-80;
+  }
+
+  :active {
+    background: $orange-120;
+  }
+}
+
+@media screen and (min-width: calc(#{$tablet} - 1px)) {
+  .buttonDefault {
+    height: 64px;
+    min-width: 296px;
+    border-radius: 12px;
+    padding: 21px;
+    font-size: $font-size-default;
+  }
+}
+
+@media screen and (max-width: #{$tablet}) {
+  .buttonDefault {
+    height: 48px;
+    min-width: 288px;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: $font-size-default-mobile;
+  }
+}

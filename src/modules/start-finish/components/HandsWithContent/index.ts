@@ -1,0 +1,1 @@
+export * from '@/modules/start-finish/components/HandsWithContent'
